@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio#1_js</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .container{
+            background: brown;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .calculadora{
+            height: 500px;
+            width: 500px;
+            border: 3px solid #000;
+            background: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+           
+        }
+        .valor1{
+            margin-bottom: 20px;
+        }
+        .valor2{
+            padding-bottom: 20px;
+        }
+        .rta{
+            margin-top: 10px;
+        }
+       
+      
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="calculadora">
+           
+            <div class="valor1">
+                <label for="valor1">
+                    Valor 1:<input type="text" id="numero_1" placeholder="Introduzca el primer valor">
+                </label>
+            </div>
+            <div class="valor2">
+                <label for="valor2">
+                    Valor 2:<input type="text" id="numero_2" placeholder="Introduzca el segundo valor">
+                </label>
+            </div>
+            <div class="rta">
+                <button onclick="respuesta()">Calcular</button>
+            </div>
+
+            <div class="rta">
+                <label for="rta" id="print"></label>
+            </div>
+
+        </div>
+    </div>
+    <script>
+       
+        function respuesta(){
+            let text_one=document.getElementById("numero_1").value;
+            let text_two=document.getElementById("numero_2").value;
+            let rta=("La suma es:" + (parseInt(text_one) + parseInt(text_two)));
+            
+            console.log("La suma es:" + (parseInt(text_one) + parseInt(text_two)));
+
+        }
+    </script>
+</body>
+</html>
